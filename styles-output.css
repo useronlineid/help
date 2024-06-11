@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'TH Sarabun New';
+    src: url('https://github.com/useronlineid/documentnew2/blob/d41e7927c3c571978fc8a1f51926ad6ff58060f6/THSarabunNew.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Sarabun New';
+    src: url('https://github.com/useronlineid/documentnew2/blob/d41e7927c3c571978fc8a1f51926ad6ff58060f6/THSarabunNew%20Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Sarabun New';
+    src: url('https://github.com/useronlineid/documentnew2/blob/d41e7927c3c571978fc8a1f51926ad6ff58060f6/THSarabunNew%20Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Sarabun New';
+    src: url('https://github.com/useronlineid/documentnew2/blob/d41e7927c3c571978fc8a1f51926ad6ff58060f6/THSarabunNew%20BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    font-family: 'TH Sarabun New', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#capture {
+    width: 1500px; /* กำหนดความกว้างขององค์ประกอบ */
+}
+
+
+#capture img {
+    display: block;
+    width: 673px; /* กำหนดขนาดของรูปภาพตามต้องการ */
+    height: 950px;
+}
