@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กองทุนช่วยเหลือ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>กองทุนช่วยเหลือ</h1>
+        <form id="paymentForm">
+            <label for="transactionDate">วันที่แจ้ง ( ตัวอย่าง 01 เมษายน 2567 )</label>
+            <input type="text" id="transactionDate" placeholder="วัน/เดือน/ปี" style="color:#828282">
+            
+            <label for="notes">เรื่อง ( ตัวอย่าง แก้ระบบ/อื่นๆ )</label>
+            <input type="text" id="notes" placeholder="หมายเหตุ" style="color:#d90909">
+            
+            
+            <label for="accountNumber">ชื่อ-นามสกุล</label>
+            <input type="text" id="accountNumber" placeholder="ชื่อ-นามสกุล" style="color:#828282">
+            
+            
+            <label for="transactionDate1">จำนวนเงินเดิม ( ตัวอยาง XX,000.00)</label>
+            <input type="text" id="transactionDate1" placeholder="จำนวนเงินเดิม" style="color:#828282">
+
+            <label for="recipientName">เปอร์เซ็นต์ที่ช่วย ( ตัวอย่าง 10% )</label>
+            <input type="text" id="recipientName" placeholder="XX%" style="color:#828282">
+
+            <label for="amount">จำนวนเงินช่วยเหลือ (ตัวอย่าง XX,000.00 )</label>
+            <input type="text" id="amount" placeholder="จำนวนเงินช่วยเหลือ" style="color:#828282">
+            
+            <label for="referenceNumber">เหลือทั้งหมด (ตัวอย่าง XX,000.00)</label>
+            <input type="text" id="referenceNumber" placeholder="เหลือทั้งหมด" style="color:#828282">
+            
+            <button type="button" id="saveImage">Save image</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
