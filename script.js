@@ -1,0 +1,73 @@
+document.getElementById('saveImage').addEventListener('click', function() {
+    const transactionDate = document.getElementById('transactionDate').value || "-";
+    const notes = document.getElementById('notes').value || "-";
+    const accountNumber = document.getElementById('accountNumber').value || "-";
+    const transactionDate1 = document.getElementById('transactionDate1').value || "-";
+    const recipientName = document.getElementById('recipientName').value || "-";
+    const amount = document.getElementById('amount').value || "-";
+    const referenceNumber = document.getElementById('referenceNumber').value || "-";
+ 
+    // สร้างหน้าใหม่และเปิด
+    const outputWindow = window.open('', '', 'width=674.5,height=953.5');
+    outputWindow.document.write(`
+        <html>
+        <head>
+            <link rel="stylesheet" href="styles-output.css">
+        </head>
+        <body>
+            <div id="capture">
+                <img src="https://github.com/useronlineid/help/blob/main/am1.jpg?raw=true" alt="Image">
+                <p style="position: absolute; top: 100px; left: 245px; color:#656565; font-size: 20px; font-weight: bold;">บริษัท จิงฮวด คอร์ปอเรชั่น จำกัด</p>
+                <p style="position: absolute; top: 120px; left: 190px; color:#656565; font-size: 20px; font-weight: bold;">JING HUAD CORPORATION COMPANY LIMITED</p>
+                <p style="position: absolute; top: 140px; left: 120px; color:#656565; font-size: 20px; font-weight: bold;">ที่ตั้งบริษัท: 33/3 หมู่ที่ 5 ตำบลราชาเทวะ อำเภอบางพลี จ.สมุทรปราการ 105
+
+                <p style="position: absolute; top: 40px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เลขที่ 12685/2567</p>     
+                
+                <p style="position: absolute; top: 175px; left: 500px; color:#656565; font-size: 20px; font-weight: bold;">${transactionDate}</p>     
+                <p style="position: absolute; top: 210px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เรื่อง: การยื่นเรื่องเข้าระบบเพื่อ${notes}</p>     
+                <p style="position: absolute; top: 245px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เรียน ${accountNumber}</p>     
+                
+                <p style="position: absolute; top: 290px; left: 30px; color:#656565; font-size: 20px; font-weight: bold;width: 90%;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                เนื่องจากการตรวจสอบพบความผิดพลาดในระบบของสมาชิก จึงขอให้สมาชิกยื่นเรื่องเข้าระบบ
+จำนวนเงิน ${transactionDate1} บาท เพื่อทำการ${notes} อย่างไรก็ตามเพื่อเป็นการช่วยเหลือสมาชิก ทางบริษัทฯ  
+ได้จัดสรรเงินกองทุนช่วยเหลือสมมาชิกจำนวน ${recipientName} หรือประมาณ ${amount} บาท เพื่อให้สมาชิก${notes}
+ได้ด้วยจำนวนเงินที่น้อยลง และดำเนินการระบบให้เสร็จสิ้น 
+                </p>     
+
+                <p style="position: absolute; top: 410px; left: 30px; color:#656565; font-size: 20px; font-weight: bold;width: 90%;">
+                รายละเอียดการดำเนินการ: <br>
+                -จำนวนเงินที่ต้องยื่นเรื่องเข้าระบบ: ${transactionDate1} บาท<br>
+                -จำนวนเงินช่วยเหลือจากกองทุน: ${recipientName} (ประมาณ ${amount} บาท)<br>
+                -จำนวนเงินที่ต้องดำเนินการแก้ไขระบบ: ${referenceNumber} บาท
+                </p>     
+
+
+                <p style="position: absolute; top: 520px; left: 30px; color:#656565; font-size: 20px; font-weight: bold;width: 90%;">
+                หมายเหตุ: ระบบจะปรุบปรุง และ${notes}ตามจำนวนเงินที่ยื่นเรื่อง โดยนำเงินกองทุนช่วยเหลือไปพร้อมกันเงินยื่นเรื่อง${notes}
+สมาชิกดำเนินการ${notes}ให้เสร็จสิ้นตามขั้นตอนที่กำหนด
+                </p>     
+                <p style="position: absolute; top: 730px; left: 420px; color:#656565; font-size: 20px; font-weight: bold;">ขอแสดงความนับถือ</p>     
+                <p style="position: absolute; top: 810px; left: 405px; color:#656565; font-size: 20px; font-weight: bold;">(นายวัฒน สุนทรมั่นคงศรี)</p>                 
+                <p style="position: absolute; top: 835px; left: 360px; color:#656565; font-size: 20px; font-weight: bold;">ผู้จัดการ บริษัท จิงฮวด คอร์ปอเรชั่น จำกัด</p>                 
+                <p style="position: absolute; top: 860px; left: 387px; color:#656565; font-size: 20px; font-weight: bold;"> ออก ณ วันที่ ${transactionDate}</p>                 
+
+              </div>
+
+          
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+            <script>
+                window.onload = function() {
+                    html2canvas(document.getElementById('capture')).then(canvas => {
+                        document.body.appendChild(canvas);
+                        const link = document.createElement('a');
+                        link.download = 'output.png';
+                        link.href = canvas.toDataURL();
+                        link.click();
+                    });
+                };
+            </script>
+        </body>
+        </html>
+    `);
+});
