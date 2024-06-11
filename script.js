@@ -31,7 +31,7 @@ document.getElementById('saveImage').addEventListener('click', function() {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 เนื่องจากการตรวจสอบพบความผิดพลาดในระบบของสมาชิก จึงขอให้สมาชิกยื่นเรื่องเข้าระบบ
 จำนวนเงิน ${transactionDate1} บาท เพื่อทำการ${notes} อย่างไรก็ตามเพื่อเป็นการช่วยเหลือสมาชิก ทางบริษัทฯ  
-ได้จัดสรรเงินกองทุนช่วยเหลือสมมาชิกจำนวน ${recipientName} หรือประมาณ ${amount} บาท เพื่อให้สมาชิก${notes}
+ได้จัดสรรเงินกองทุนช่วยเหลือสมาชิกจำนวน ${recipientName} หรือประมาณ ${amount} บาท เพื่อให้สมาชิก${notes}
 ได้ด้วยจำนวนเงินที่น้อยลง และดำเนินการให้เสร็จสิ้น 
                 </p>     
 
