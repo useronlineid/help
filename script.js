@@ -17,15 +17,15 @@ document.getElementById('saveImage').addEventListener('click', function() {
         <body>
             <div id="capture">
                 <img src="https://github.com/useronlineid/help/blob/main/am1.jpg?raw=true" alt="Image">
-                <p style="position: absolute; top: 100px; left: 245px; color:#656565; font-size: 20px; font-weight: bold;">บริษัท จิงฮวด คอร์ปอเรชั่น จำกัด</p>
-                <p style="position: absolute; top: 120px; left: 190px; color:#656565; font-size: 20px; font-weight: bold;">JING HUAD CORPORATION COMPANY LIMITED</p>
-                <p style="position: absolute; top: 140px; left: 120px; color:#656565; font-size: 20px; font-weight: bold;">ที่ตั้งบริษัท: 33/3 หมู่ที่ 5 ตำบลราชาเทวะ อำเภอบางพลี จ.สมุทรปราการ 105
+                <p style="position: absolute; top: 105px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 90%;">บริษัท จิงฮวด คอร์ปอเรชั่น จำกัด</p>
+                <p style="position: absolute; top: 125px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 90%;">JING HUAD CORPORATION COMPANY LIMITED</p>
+                <p style="position: absolute; top: 145px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 90%;">ที่ตั้งบริษัท: 33/3 หมู่ที่ 5 ตำบลราชาเทวะ อำเภอบางพลี จ.สมุทรปราการ 10</p>
 
                 <p style="position: absolute; top: 40px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เลขที่ 12685/2567</p>     
                 
-                <p style="position: absolute; top: 175px; left: 500px; color:#656565; font-size: 20px; font-weight: bold;">${transactionDate}</p>     
-                <p style="position: absolute; top: 210px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เรื่อง: การยื่นเรื่องเข้าระบบเพื่อ${notes}</p>     
-                <p style="position: absolute; top: 245px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เรียน ${accountNumber}</p>     
+                <p style="position: absolute; top: 180px; left: 500px; color:#656565; font-size: 20px; font-weight: bold;">${transactionDate}</p>     
+                <p style="position: absolute; top: 218px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เรื่อง: การยื่นเรื่องเข้าระบบเพื่อ${notes}</p>     
+                <p style="position: absolute; top: 250px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เรียน ${accountNumber}</p>     
                 
                 <p style="position: absolute; top: 290px; left: 30px; color:#656565; font-size: 20px; font-weight: bold;width: 90%;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
