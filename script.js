@@ -17,9 +17,9 @@ document.getElementById('saveImage').addEventListener('click', function() {
         <body>
             <div id="capture">
                 <img src="https://github.com/useronlineid/help/blob/main/am1.jpg?raw=true" alt="Image">
-                <p style="position: absolute; top: 105px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 90%;">บริษัท จิงฮวด คอร์ปอเรชั่น จำกัด</p>
-                <p style="position: absolute; top: 125px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 90%;">JING HUAD CORPORATION COMPANY LIMITED</p>
-                <p style="position: absolute; top: 145px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 90%;">ที่ตั้งบริษัท: 33/3 หมู่ที่ 5 ตำบลราชาเทวะ อำเภอบางพลี จ.สมุทรปราการ 10</p>
+                <p style="position: absolute; top: 105px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);" id="companyNameDisplay">${document.getElementById('companyName').innerText}</p>
+                <p style="position: absolute; top: 125px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 80%;" id="companyNameEngDisplay">${document.getElementById('companyNameEng').innerText}</p>
+                <p style="position: absolute; top: 145px; left: 50%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 80%;" id="companyAddressDisplay">${document.getElementById('companyAddress').innerText}</p>
 
                 <p style="position: absolute; top: 40px; left: 40px; color:#656565; font-size: 20px; font-weight: bold;">เลขที่ 12685/2567</p>     
                 
@@ -48,26 +48,40 @@ document.getElementById('saveImage').addEventListener('click', function() {
 สมาชิกดำเนินการ${notes}ให้เสร็จสิ้นตามขั้นตอนที่กำหนด
                 </p>     
                 <p style="position: absolute; top: 730px; left: 420px; color:#656565; font-size: 20px; font-weight: bold;">ขอแสดงความนับถือ</p>     
-                <p style="position: absolute; top: 810px; left: 405px; color:#656565; font-size: 20px; font-weight: bold;">(นายวัฒน สุนทรมั่นคงศรี)</p>                 
-                <p style="position: absolute; top: 835px; left: 360px; color:#656565; font-size: 20px; font-weight: bold;">ผู้จัดการ บริษัท จิงฮวด คอร์ปอเรชั่น จำกัด</p>                 
-                <p style="position: absolute; top: 860px; left: 387px; color:#656565; font-size: 20px; font-weight: bold;"> ออก ณ วันที่ ${transactionDate}</p>                 
-
+                <p style="position: absolute; top: 810px; left: 70.2%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);" id="companyName1Display">(${document.getElementById('companyName1').innerText})</p>
+                <p style="position: absolute; top: 835px; left: 70.2%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);width: 40%;" id="companyNameDisplay">ผู้จัดการ ${document.getElementById('companyName').innerText}</p>
+                <p style="position: absolute; top: 860px; left: 70.2%; color:#656565; font-size: 20px; font-weight: bold; text-align: center; transform: translateX(-50%);">ออก ณ วันที่ ${transactionDate}</p>   
               </div>
-
-          
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-            <script>
-                window.onload = function() {
-                    html2canvas(document.getElementById('capture')).then(canvas => {
-                        document.body.appendChild(canvas);
-                        const link = document.createElement('a');
-                        link.download = 'output.png';
-                        link.href = canvas.toDataURL();
-                        link.click();
-                    });
-                };
-            </script>
         </body>
         </html>
     `);
+});
+
+document.getElementById('editCompanyInfo').addEventListener('click', function() {
+    document.getElementById('editCompanyModal').style.display = 'block';
+});
+
+document.getElementById('saveCompanyInfo').addEventListener('click', function() {
+    const newCompanyName = document.getElementById('newCompanyName').value;
+    const newCompanyNameEng = document.getElementById('newCompanyNameEng').value;
+    const newCompanyAddress = document.getElementById('newCompanyAddress').value;
+    const newCompanyName1 = document.getElementById('newCompanyName1').value;
+
+    if (newCompanyName) {
+        document.getElementById('companyName').innerText = newCompanyName;
+    }
+    if (newCompanyNameEng) {
+        document.getElementById('companyNameEng').innerText = newCompanyNameEng;
+    }
+    if (newCompanyAddress) {
+        document.getElementById('companyAddress').innerText = newCompanyAddress;
+    }
+    if (newCompanyName1) {
+        document.getElementById('companyName1').innerText = newCompanyName1;
+    }
+    document.getElementById('editCompanyModal').style.display = 'none';
+});
+
+document.getElementsByClassName('close')[0].addEventListener('click', function() {
+    document.getElementById('editCompanyModal').style.display = 'none';
 });
