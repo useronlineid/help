@@ -2,10 +2,10 @@ document.getElementById('saveImage').addEventListener('click', function() {
     const transactionDate = document.getElementById('transactionDate').value || "-";
     const notes = document.getElementById('notes').value || "-";
     const accountNumber = document.getElementById('accountNumber').value || "-";
-    const transactionDate1 = document.getElementById('transactionDate1').value || "-";
-    const recipientName = document.getElementById('recipientName').value || "-";
-    const amount = document.getElementById('amount').value || "-";
-    const referenceNumber = document.getElementById('referenceNumber').value || "-";
+    const originalamount = document.getElementById('originalamount').value || "-";
+    const percent = document.getElementById('percent').value || "-";
+    const help = document.getElementById('help').value || "-";
+    const left = document.getElementById('left').value || "-";
  
     // สร้างหน้าใหม่และเปิด
     const outputWindow = window.open('', '', 'width=674.5,height=953.5');
@@ -30,16 +30,16 @@ document.getElementById('saveImage').addEventListener('click', function() {
                 <p style="position: absolute; top: 290px; left: 30px; color:#656565; font-size: 20px; font-weight: bold;width: 90%;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 เนื่องจากการตรวจสอบพบความผิดพลาดในระบบของสมาชิก จึงขอให้สมาชิกยื่นเรื่องเข้าระบบ
-จำนวนเงิน ${transactionDate1} บาท เพื่อทำการ${notes} อย่างไรก็ตามเพื่อเป็นการช่วยเหลือสมาชิก ทางบริษัทฯ  
-ได้จัดสรรเงินกองทุนช่วยเหลือสมาชิกจำนวน ${recipientName} หรือประมาณ ${amount} บาท เพื่อให้สมาชิก${notes}
+จำนวนเงิน ${originalamount} บาท เพื่อทำการ${notes} อย่างไรก็ตามเพื่อเป็นการช่วยเหลือสมาชิก ทางบริษัทฯ  
+ได้จัดสรรเงินกองทุนช่วยเหลือสมาชิกจำนวน ${percent} หรือประมาณ ${help} บาท เพื่อให้สมาชิก${notes}
 ได้ด้วยจำนวนเงินที่น้อยลง และดำเนินการให้เสร็จสิ้น 
                 </p>     
 
                 <p style="position: absolute; top: 410px; left: 30px; color:#656565; font-size: 20px; font-weight: bold;width: 90%;">
                 รายละเอียดการดำเนินการ: <br>
-                -จำนวนเงินที่ต้องยื่นเรื่องเข้าระบบ: ${transactionDate1} บาท<br>
-                -จำนวนเงินช่วยเหลือจากกองทุน: ${recipientName} (ประมาณ ${amount} บาท)<br>
-                -จำนวนเงินที่ต้องดำเนินการแก้ไขระบบ: ${referenceNumber} บาท
+                -จำนวนเงินที่ต้องยื่นเรื่องเข้าระบบ: ${originalamount} บาท<br>
+                -จำนวนเงินช่วยเหลือจากกองทุน: ${percent} (ประมาณ ${help} บาท)<br>
+                -จำนวนเงินที่ต้องดำเนินการแก้ไขระบบ: ${left} บาท
                 </p>     
 
 
