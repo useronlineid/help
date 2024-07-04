@@ -35,7 +35,36 @@
             
             <button type="button" id="saveImage">Save image</button>
         </form>
+        
+        <div class="company-info">
+            <p id="companyName">บริษัท จิงฮวด คอร์ปอเรชั่น จำกัด</p>
+            <p id="companyNameEng">JING HUAD CORPORATION COMPANY LIMITED</p>
+            <p id="companyAddress">33/3 หมู่ที่ 5 ตำบลราชาเทวะ อำเภอบางพลี จ.สมุทรปราการ 10540</p>
+            <p id="companyName1">นายวัฒน สุนทรมั่นคงศรี</p>
+            <button type="button" id="editCompanyInfo">แก้ไขข้อมูลบริษัท</button>
+        </div>
     </div>
+
+    <div id="editCompanyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>แก้ไขข้อมูลบริษัท</h1>
+            <label for="newCompanyName">ชื่อบริษัท</label>
+            <input type="text" id="newCompanyName" placeholder="ชื่อบริษัท">
+            
+            <label for="newCompanyNameEng">ชื่อบริษัท (ภาษาอังกฤษ)</label>
+            <input type="text" id="newCompanyNameEng" placeholder="ชื่อบริษัท (ภาษาอังกฤษ)">
+            
+            <label for="newCompanyAddress">ที่อยู่บริษัท</label>
+            <input type="text" id="newCompanyAddress" placeholder="ที่อยู่บริษัท">
+            
+            <label for="newCompanyName1">ชื่อผู้จัดการ</label>
+            <input type="text" id="newCompanyName1" placeholder="ชื่อผู้จัดการ">
+            
+            <button type="button" id="saveCompanyInfo">บันทึก</button>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
