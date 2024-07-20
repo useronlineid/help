@@ -39,12 +39,12 @@ document.getElementById('saveImage').addEventListener('click', function() {
                 รายละเอียดการดำเนินการ: <br>
                 -จำนวนเงินที่ต้องยื่นเรื่องเข้าระบบ: ${originalamount} บาท<br>
                 -จำนวนเงินช่วยเหลือจากกองทุน: ${percent} (ประมาณ ${help} บาท)<br>
-                -จำนวนเงินที่ต้องดำเนินการแก้ไขระบบ: ${left} บาท
+                -จำนวนเงินที่ต้องดำเนินการ: ${left} บาท
                 </p>     
 
 
                 <p style="position: absolute; top: 520px; left: 30px; color:#656565; font-size: 20px; font-weight: bold;width: 90%;">
-                หมายเหตุ: ระบบจะปรุบปรุง และ${notes}ตามจำนวนเงินที่ยื่นเรื่อง โดยนำเงินกองทุนช่วยเหลือไปพร้อมกันเงินยื่นเรื่อง${notes}
+                หมายเหตุ: ระบบจะปรับปรุง${notes}ตามจำนวนเงินที่ยื่นเรื่อง โดยนำเงินกองทุนช่วยเหลือไปพร้อมกันเงินยื่นเรื่อง${notes}
 สมาชิกดำเนินการ${notes}ให้เสร็จสิ้นตามขั้นตอนที่กำหนด
                 </p>     
                 <p style="position: absolute; top: 730px; left: 420px; color:#656565; font-size: 20px; font-weight: bold;">ขอแสดงความนับถือ</p>     
