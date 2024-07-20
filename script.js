@@ -39,7 +39,7 @@ document.getElementById('saveImage').addEventListener('click', function() {
                 รายละเอียดการดำเนินการ: <br>
                 -จำนวนเงินที่ต้องยื่นเรื่องเข้าระบบ: ${originalamount} บาท<br>
                 -จำนวนเงินช่วยเหลือจากกองทุน: ${percent} (ประมาณ ${help} บาท)<br>
-                -จำนวนเงินที่ต้องดำเนินการ: ${left} บาท
+                -จำนวนเงินที่ต้องดำเนินการ${notes}: ${left} บาท
                 </p>     
 
 
